@@ -2,7 +2,7 @@ function getbooks(){
     //
     document.getElementById('output').innerHTML="";
 
-    fetch("http://openlibrary.org/search.json?q="+document.getElementById("input").value)
+    fetch("https://openlibrary.org/search.json?q="+document.getElementById("input").value)
     .then(a=>a.json())
     .then(response=>{
         // console.log(response);
