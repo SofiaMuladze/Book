@@ -15,16 +15,24 @@ body {
 body h1 {
   font-family: "Roboto Slab", serif;
 }
+body .hero-logo {
+  background-color: #f7eee0;
+  width: 100%;
+  padding: 15px 100px;
+  position: fixed;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.1019607843) 5px 10px 35px;
+}
+body .hero-logo img {
+  max-width: 110px;
+  margin: auto;
+}
 body .hero-color {
   padding: 100px;
-  padding-top: 0;
+  padding-top: 50px;
   border-radius: 0 0 100% 0%/20%;
   background-color: #f7eee0;
   box-shadow: rgba(0, 0, 0, 0.1019607843) 5px 10px 35px;
-}
-body .hero-color .hero-logo {
-  max-width: 120px;
-  padding: 20px 0;
 }
 body .hero-color .hero {
   display: flex;
@@ -36,7 +44,7 @@ body .hero-color .hero .hero-text {
 body .hero-color .hero .hero-text h1 {
   font-size: 50px;
   color: #e55b14;
-  margin: 30px 0;
+  padding: 40px 0;
   margin-top: 50px;
 }
 body .hero-color .hero .hero-text h6 {
@@ -48,7 +56,6 @@ body .hero-color .hero .hero-text .search {
   text-align: center;
   margin-top: 100px;
   align-items: center;
-  /* reset input */
 }
 body .hero-color .hero .hero-text .search .form__group {
   position: relative;
@@ -118,9 +125,9 @@ body .hero-color .hero .hero-image img {
 body .output {
   display: flex;
   flex-wrap: wrap;
-  margin: 50px;
+  margin: 90px;
   margin-top: 0;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 body .output .okay {
@@ -201,198 +208,47 @@ body .output .okay .linkBtn .bookLink {
   border-radius: 50px;
   text-decoration: none;
   color: #f7eee0;
+  border: 1px solid transparent;
   font-size: 12px;
   letter-spacing: 1px;
   box-shadow: rgba(0, 0, 0, 0.1490196078) 2px 3px 15px;
 }
+body .output .okay .linkBtn .bookLink:hover {
+  border: 1px solid #e55b14;
+  background-color: #f7eee0;
+  color: #e55b14;
+}
 
 @media (max-width: 992px) {
+  body .hero-logo {
+    text-align: center;
+  }
+  body .hero-logo img {
+    width: 85px;
+  }
   body .hero-color {
     padding: 40px;
-    padding-top: 0;
+    padding-top: 75px;
     border-radius: 0;
-    background-color: #f7eee0;
-    box-shadow: rgba(0, 0, 0, 0.1019607843) 5px 10px 35px;
-  }
-  body .hero-color .hero-logo {
-    max-width: 100px;
-    padding: 20px 0;
   }
   body .hero-color .hero {
     flex-direction: column-reverse;
     text-align: center;
   }
-  body .hero-color .hero .hero-text {
-    flex: 0 1 40%;
-  }
   body .hero-color .hero .hero-text h1 {
     font-size: 40px;
-    color: #e55b14;
     margin-bottom: 30px;
     margin-top: 20px;
-  }
-  body .hero-color .hero .hero-text h6 {
-    font-size: 15px;
-    color: #003060;
+    padding: 0;
   }
   body .hero-color .hero .hero-text .search {
     margin-top: 25px;
     justify-content: center;
-    /* reset input */
-  }
-  body .hero-color .hero .hero-text .search .form__group {
-    position: relative;
-    padding: 15px 0 0;
-    margin-top: 10px;
-    width: 85%;
-  }
-  body .hero-color .hero .hero-text .search .form__field {
-    width: 100%;
-    border: 0;
-    border-bottom: 2px solid #003060;
-    outline: 0;
-    font-size: 30px;
-    color: #003060;
-    padding: 7px 0;
-    background: transparent;
-    font-weight: bold;
-  }
-  body .hero-color .hero .hero-text .search .form__field::placeholder {
-    color: transparent;
-  }
-  body .hero-color .hero .hero-text .search .form__field:placeholder-shown ~ .form__label {
-    font-size: 30px;
-    cursor: text;
-    top: 20px;
-  }
-  body .hero-color .hero .hero-text .search .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.5s;
-    color: #e55b14;
-  }
-  body .hero-color .hero .hero-text .search .form__field:focus {
-    border-bottom: 2px solid #e55b14;
-  }
-  body .hero-color .hero .hero-text .search .form__field:focus ~ .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.5s;
-    font-size: 20px;
-    color: #e55b14;
-  }
-  body .hero-color .hero .hero-text .search button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    margin-left: 20px;
-  }
-  body .hero-color .hero .hero-text .search button img {
-    width: 30px;
-    position: absolute;
-  }
-  body .hero-color .hero .hero-text .search button :hover {
-    transition: all 0.5s;
-    transform: scale(1.5);
-    color: rgb(187, 219, 58);
   }
   body .hero-color .hero .hero-image {
-    flex: 0 1 50%;
     padding-bottom: 0;
   }
   body .hero-color .hero .hero-image img {
     width: 80%;
-  }
-  body .output {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px;
-    margin-top: 0;
-    justify-content: center;
-    align-items: center;
-  }
-  body .output .okay {
-    flex: 0 1 20%;
-    margin: 25px 10px;
-    background-color: #f7eee0;
-    border-radius: 10px;
-    padding-bottom: 10px;
-    max-width: 250px;
-    box-shadow: rgba(0, 0, 0, 0.1019607843) 5px 10px 25px;
-  }
-  body .output .okay .bookCover {
-    margin: auto;
-    text-align: center;
-  }
-  body .output .okay .bookCover img {
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    width: 250px;
-    height: 200px;
-  }
-  body .output .okay .bookTitle {
-    height: 20px;
-    color: #003060;
-    margin: 10px;
-  }
-  body .output .okay .bookTitle h1 {
-    font-size: 16px;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
-  body .output .okay .authorName {
-    height: 20px;
-    color: #a47551;
-    margin: 20px 10px;
-    padding-top: 10px;
-  }
-  body .output .okay .authorName h3 {
-    font-size: 13px;
-    font-weight: 400;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-  }
-  body .output .okay .coverPlace {
-    background-color: #003060;
-    width: 250px;
-    height: 200px;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-  }
-  body .output .okay .coverPlace .titlePlace {
-    font-size: 18px;
-    color: #e55b14;
-    padding: 20px;
-  }
-  body .output .okay .coverPlace .authorPlace {
-    color: #a47551;
-    font-size: 15px;
-    padding: 20px;
-  }
-  body .output .okay .linkBtn {
-    text-align: right;
-    margin: 10px;
-    padding: 10px;
-    padding-right: 0;
-  }
-  body .output .okay .linkBtn .bookLink {
-    background-color: #e55b14;
-    padding: 10px 14px;
-    border-radius: 50px;
-    text-decoration: none;
-    color: #f7eee0;
-    font-size: 12px;
-    letter-spacing: 1px;
-    box-shadow: rgba(0, 0, 0, 0.1490196078) 2px 3px 15px;
   }
 }/*# sourceMappingURL=style.css.map */

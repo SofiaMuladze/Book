@@ -15,38 +15,43 @@
     <title>Book</title>
 </head>
 <body>
-    <div class="menu">
-        
+    <div class="hero-logo">
+        <a href="#home"><img src="images/logo.svg" alt="logo"></a>
     </div>
+    <a name="home"></a>
     <div class="hero-color">
-        <div class="hero-logo">
-            <img src="images/logo.svg" alt="logo">
-        </div>
         <div class="hero">
             <div class="hero-text">
                 <div>
                     <h1>Discover books you'll love!</h1>
                     <h6>You can find books by title, author name, or subject</h6>
                 </div>
+
                 <div class="search">
                     <div class="form__group field">
                         <input type="input" class="form__field" placeholder="Search" name="name"  id="input" required />
                         <label for="name" class="form__label">Search</label>
                     </div>
             
-                    <!-- <input class="search-input" id="input"> -->
-                    <a href="#booksResponse"><button id="searchBtn" class="search-btn" onclick="getbooks()"><img src="images/search.svg" alt="search"></button><br></a>
-                    
+                    <a href="#booksResponse">
+                        <button id="searchBtn" class="search-btn" onclick="getbooks()">
+                            <img src="images/search.svg" alt="search">
+                        </button>
+                    </a>
                 </div>
-                <div id="inputMessage"></div>
+
             </div>
+
             <div class="hero-image">
                 <img src="images/hero.svg" alt="hero-img">
             </div>
+
         </div>
     </div>
+    
     <a name="booksResponse"></a>
     <div class="output" id="output">
+
     </div>
 
     <script src="js/script.js"></script>
