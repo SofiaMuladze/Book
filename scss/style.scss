@@ -153,7 +153,7 @@ body {
         justify-content: space-between;
         align-items: center;
     
-        .okay {
+        .books-container {
             flex: 0 1 20%;
             // padding: 10px;
             margin: 25px 10px;
@@ -292,6 +292,25 @@ body {
                     img {
                         width: 80%;
                     }
+                }
+            }
+        }
+        .output {
+            justify-content: center;
+           
+            .books-container {
+                .bookCover {
+                    img {
+                        object-fit: cover;
+                        border-radius: 10px 10px 0 0;
+                        width: 200px;
+                        height: 150px;
+                    }
+                }
+            
+                .coverPlace {
+                    width: 200px;
+                    height: 150px;
                 }
             }
         }

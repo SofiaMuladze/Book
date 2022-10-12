@@ -31,7 +31,7 @@ function getbooks(){
             var key = "<div class='linkBtn'>"+"<a class='bookLink' href = "+linkDesc+" target='_blank'>"+'Description'+"</a>"+"</div>";
 
             //output
-            const datax = document.getElementById("output").innerHTML+= "<div class='okay'>"+bookCover+bookTitle+authorName+key;
+            const datax = document.getElementById("output").innerHTML+= "<div class='books-container'>"+bookCover+bookTitle+authorName+key;
         }
     });
 
