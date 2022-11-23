@@ -28,19 +28,15 @@
                     <h6>You can find books by title, author name, or subject</h6>
                 </div>
 
-                <div class="search">
-                    <div class="form__group field">
+                <form class="search" onsubmit="getBooks(event)">
+                    <div class="form__group field" >
                         <input type="input" class="form__field" placeholder="Search" name="name"  id="input" required />
                         <label for="name" class="form__label">Search</label>
                     </div>
-            
-                    <a href="#booksResponse">
-                        <button id="searchBtn" class="search-btn" onclick="getbooks()">
-                            <img src="images/search.svg" alt="search">
-                        </button>
-                    </a>
-                </div>
-
+                    <button id="searchBtn" class="search-btn">
+                        <img src="images/search.svg" alt="search">
+                    </button>
+                </form>
             </div>
 
             <div class="hero-image">
@@ -49,6 +45,8 @@
 
         </div>
     </div>
+    <div class="booksResponse"></div>
+
 
     <div class="loader" id="loader">
         <div class="book">
@@ -80,10 +78,10 @@
           </div>
     </div>
 
-    <a name="booksResponse"></a>
     <div class="output" id="output">
     </div>
 
     <script src="js/script.js"></script>
+
 </body>
 </html>
