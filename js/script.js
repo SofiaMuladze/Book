@@ -3,15 +3,14 @@ const loader = document.querySelector("#loader");
 function displayLoading() {
     loader.classList.add("display");
 }
-
 // funzione che nasconde il loader
 function hideLoading() {
     loader.classList.remove("display");
 }
 
 async function getBooks(e) {
-    e.preventDefault();
-    window.location.href="#loader";
+    e.preventDefault();//previene il refresh della pagina 
+    window.location.href="#loader";//rimanda alla sezione loader 
     displayLoading();//mostra il loader
     document.getElementById('output').innerHTML = "";
     await fetch(`https://openlibrary.org/search.json?q=${document.getElementById("input").value}`)
@@ -23,7 +22,7 @@ async function getBooks(e) {
                 alert("Please enter something in the search field");
             }
 
-            for (var i = 0; i < 80; i++) {
+            for (let i = 0; i < 40; i++) {
                 // console.log(response.docs[i]);
                 const author = response.docs[i].author_name;
                 const title = response.docs[i].title;
@@ -58,13 +57,13 @@ async function getBooks(e) {
             }
         })
         
-        .catch(error => {
+        .catch(error => {//mostra l'errore nel caso la chiamata all'Api non vada a buon fine 
             console.log(error)
             document.getElementById("output").innerHTML += `<div class='errorMessage'><h1>No books found</h1></div>`;
         })
 
         .finally(() => {
-            window.location.href="#output";
+            window.location.href="#output";//rimanda alla sezione dell'output quando l'api risponde 
             document.getElementById('input').value = '';//Reset del campo di input 
             hideLoading();//Nasconde il loader
         });
