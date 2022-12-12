@@ -1,15 +1,36 @@
-# 🚀 Welcome to your new awesome project!
+# **Search Books**
+## _Js Advanced - Education_
 
-This project has been created using **webpack-cli**, you can now run
+![My Image](images/screen.png)
+### _Responsive_
+***
 
-```
-npm run build
-```
+## _**Languages**_
 
-or
+![My Image](images/Languages.png)
 
-```
-yarn build
-```
+* HTML
 
-to bundle your application
+* CSS
+
+* SCSS
+
+*  JAVASCRIPT 
+
+***
+
+## _**How this works**_
+
+### •You can find books by title, author name, or subject
+
+
+### •This website use Open Library's API
+
+![My Image](images/booksOutput.png)
+
+
+***
+
+## _**GitHub Pages**_
+
+### https://sofiamuladze.github.io/Book/
